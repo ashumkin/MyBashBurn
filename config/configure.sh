@@ -80,6 +80,7 @@ ReadAction
 		
 		# Detecting the CDRW-DEVICES with cdrecord.
 		$(cdrecord dev=ATA -scanbus >${TMPFILE_1} 2>&1)
+		$(cdrecord dev=OLDATAPI -scanbus >${TMPFILE_1} 2>&1)
 		$(cdrecord -scanbus >>${TMPFILE_1} 2>&1) &
 		
 		# Show output of cdrecord in a textbox.
