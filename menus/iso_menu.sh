@@ -38,7 +38,7 @@ function check_for_iso()
 #-----------------------------------------------------------------------------
 function create_iso_from_dir()
 {
-    if [`ls ${BBBURNDIR}` = ""]; then
+    if [ "$(ls ${BBBURNDIR})" = "" ]; then
 	echo "$bb_im_error_files $BBBURNDIR"
 	wait_for_enter
     else
